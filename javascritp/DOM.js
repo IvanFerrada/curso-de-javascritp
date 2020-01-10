@@ -9,12 +9,17 @@ console.log(document.forms[0].name);
 
 // document.forms[0].campo.value='hola a todos en el campo!! ';
 
-// document.forms[0].elformulario.campo.value='hola a todos 2 !! ';
+// document.forms[0].elformulario.campo.value='hola a todos 2 !!
+
 
 
 // Metodos funciones asosiadas alos objetos 
 
 document.getElementById('etiquetaCampo').textContent='aqui';
+
+document.getElementById('c1').addEventListener('keyup',teclado);
+
+
 // .textContent="" para cambiar el texto a un elemento
 
 // agregar un evento al campo .addEventListener('click',)
@@ -27,6 +32,13 @@ function cambiaFoco (){
     document.forms.elformulario.campo.focus();
 }
 
+function teclado (){
+    console.log('lo que escribiste esta aca!!', document.forms.elformulario.campo.value);
+//}
 
+// javascritp te da una variable ... this -----> odjeto sobre el cual se a detectado un evento  se ahorra el document.forms.elformulario.campo.value !!
 
+function teclado (){
+    console.log('lo que escribiste esta aca!!', this.value);
+}
 
